@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+        servidor-web:
+                image: "lightstreamer"
+                ports:
+                        - "80:8080"
+        servidor-cliente:
+                image: "pablorehecho/lightstreamer-cliente"
+                restart: always
