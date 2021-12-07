@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  LIGHTSTREAMER - www.lightstreamer.com
+  Welcome Page
+-->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Welcome to Lightstreamer</title>
+  <link rel="stylesheet" type="text/css" href="welcome_res/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="welcome_res/css/index.css" />
+</head>
+<body>
+<div id="wrap1">
+        <div class="contents">
+                <div id="welcome">
+                        Welcome!
+                </div>
+                <div id="logo">
+                        <a href="https://www.lightstreamer.com" target="_blank">
+                                <img src="welcome_res/img/logo_white.png" border="0" />
+                        </a>
+                </div>
+                <div id="welcomeMsg">
+                        Connecting to Lightstreamer Server...
+                </div>
+        </div>
+</div>
+<div id="wrap2">
+        <div class="contents" style="padding-top: 30px">
+                <!-- Stock-List Demo -->
+                <div class="demoBox" style="margin: 0 0 20px 0; float: left">
+                        <table id="stockTable">
+                                <tr>
+                                        <td class="stockColumnTitle" style="width: 120px; text-align: left;">Stock</td>
+                                        <td class="stockColumnTitle">Price</td>
+                                        <td class="stockColumnTitle">Time</td>
+                                        <td class="stockColumnTitle" style="width: 40px;"></td>
+                                        <td class="stockColumnTitle">Change</td>
+                                        <td class="stockColumnTitle">Min</td>
+                                        <td class="stockColumnTitle" style="padding-right: 3px;">Max</td>
+                                </tr>
+                                <!-- stock row template; will be cloned for each subscribed stock -->
+                                <tr id="stocks" data-source="lightstreamer">
+                                        <td class="stockCell" style="text-align: left; padding-left: 3px">
+                                                <div data-source="lightstreamer" data-field="stock_name">Loading...</div>
+                                        </td>
+                                        <td class="stockCell">
+                                                <div data-source="lightstreamer" data-field="last_price">-</div>
+                                        </td>
+                                        <td class="stockCell">
+                                                <div data-source="lightstreamer" data-field="time">-</div>
+                                        </td>
+                                        <td class="stockCell" style="text-align: center">
+                                                <div><img data-source="lightstreamer" data-field="arrow" data-update="src"
+ src="./welcome_res/img/spacer.gif" width="20" height="8" border="0"></div>
+ ...
